@@ -1,2 +1,2 @@
-# qs
+# Sqs
 Swift query system
