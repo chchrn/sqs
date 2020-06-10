@@ -6,7 +6,7 @@
 import Foundation
 
 @objc public class WsRequest: WsRequestWrap {
-    typealias QueryParams = [String: Any]
+    public typealias QueryParams = [String: Any]
 
     @objc public init(baseUrl: URL,
                       path: String = "",
