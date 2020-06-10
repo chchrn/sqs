@@ -23,7 +23,7 @@ import wlog
 
         self.log.info("start_web_request",
                       parameters: [
-                          "req": request.urlRequest(),
+                          "req": request.urlRequest().sqs_detailedDescription(),
                           "priority": "\(priority)"
                       ])
 
