@@ -6,7 +6,7 @@
 import Foundation
 
 @objc public class WsRequestJsonBody: WsRequestWrap {
-    @objc init(_ origin: WsRequestI,
+    @objc public init(_ origin: WsRequestI,
                parameters: [String: Any]) {
         super.init(
                 WsRequestHeader(

@@ -8,8 +8,8 @@ import Foundation
 public class WsRequestQueryParams: WsRequestI {
     private let origin: WsRequestI
     private let queryParams: [String: Any]
-    init(_ origin: WsRequestI,
-         queryParams: [String: Any]) {
+    public init(_ origin: WsRequestI,
+                queryParams: [String: Any]) {
         self.origin = origin
         self.queryParams = queryParams
     }

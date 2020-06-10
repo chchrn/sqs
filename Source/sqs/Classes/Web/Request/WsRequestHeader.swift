@@ -9,7 +9,7 @@ import Foundation
     private let origin: WsRequestI
     private let headers: [String: String]
 
-    @objc init(_ origin: WsRequestI,
+    @objc public init(_ origin: WsRequestI,
                headers: [String: String]) {
         self.origin = origin
         self.headers = headers

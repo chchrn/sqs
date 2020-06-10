@@ -9,7 +9,7 @@ import Foundation
     private let origin: WsRequestI
     private let body: WsBody
 
-    init(_ origin: WsRequestI,
+    public init(_ origin: WsRequestI,
          body: WsBody) {
         self.origin = origin
         self.body = body

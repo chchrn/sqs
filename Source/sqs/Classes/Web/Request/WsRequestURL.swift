@@ -9,7 +9,7 @@ import Foundation
     private let baseUrl: URL
     private let path: String
 
-    @objc init(baseUrl: URL, path: String = "") {
+    @objc public init(baseUrl: URL, path: String = "") {
         self.baseUrl = baseUrl
         self.path = path
     }

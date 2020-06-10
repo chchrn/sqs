@@ -8,7 +8,7 @@ import Foundation
 @objc public class WsRequestWrap: NSObject, WsRequestI {
     private let origin: WsRequestI
 
-    @objc init(_ origin: WsRequestI) {
+    @objc public init(_ origin: WsRequestI) {
         self.origin = origin
     }
 

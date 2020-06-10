@@ -8,13 +8,13 @@ import Foundation
 @objc public class WsRequest: WsRequestWrap {
     typealias QueryParams = [String: Any]
 
-    @objc init(baseUrl: URL,
-               path: String = "",
-               queryParams: QueryParams = QueryParams()) {
+    @objc public init(baseUrl: URL,
+                      path: String = "",
+                      queryParams: QueryParams = QueryParams()) {
         super.init(
                 WsRequestQueryParams(
                         WsRequestURL(baseUrl: baseUrl,
-                                      path: path),
+                                     path: path),
                         queryParams: queryParams)
         )
     }
