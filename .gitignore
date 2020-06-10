@@ -1,4 +1,7 @@
 
+/Example/.idea/
+/Example/SqsExample.xcodeproj/xcuserdata/
+/Example/SqsExample.xcodeproj/project.xcworkspace/xcuserdata/
+/Carthage/
 /Example/SqsExample/.idea/
-/Example/SqsExample/SqsExample.xcodeproj/xcuserdata/
-/Example/SqsExample/SqsExample.xcodeproj/project.xcworkspace/xcuserdata/
+/Sqs.xcodeproj/xcuserdata/

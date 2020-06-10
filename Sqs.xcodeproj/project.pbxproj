@@ -10,6 +10,26 @@
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B233A9A1248FE3DB00EE5F77 /* SqsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233A95D248FE21700EE5F77 /* SqsTests.swift */; };
+		B233A9AE2490001900EE5F77 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AC2490001900EE5F77 /* FBLPromises.framework */; };
+		B233A9AF2490001900EE5F77 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AD2490001900EE5F77 /* Promises.framework */; };
+		B233A9B1249001F000EE5F77 /* wlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9B0249001F000EE5F77 /* wlog.framework */; };
+		EB386038B52CE54B5217CC20 /* WsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38663382B71F2617E2930F /* WsWebService.swift */; };
+		EB3862D8D2FE17E09A4A3ABF /* WsWebServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3862E054A670603CD920AC /* WsWebServiceOperation.swift */; };
+		EB386386C77781A4EA202B14 /* WsRequestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3865988D11527A310CD218 /* WsRequestURL.swift */; };
+		EB386390500756F83CE7DCCE /* WsJsonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38684EB107ACCD3B308688 /* WsJsonBody.swift */; };
+		EB38641B818B9A2F04C0F487 /* WsDataBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386F9FB160502396C2EDF7 /* WsDataBody.swift */; };
+		EB3864B80F7CC16D991F5F10 /* WsRequestJsonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38688E992BFD91675BCF56 /* WsRequestJsonBody.swift */; };
+		EB38651AFB3BCEB4F1768301 /* WsRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386EFB80B2FB4DA10E820B /* WsRequestBody.swift */; };
+		EB3865CA797FA2DF008ABEEE /* WsRequestWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38680FAE62AFFFE149AB1C /* WsRequestWrap.swift */; };
+		EB3865F2C4DB23BA7ED7E794 /* WsWebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3863964D78D3A963EFC839 /* WsWebResponse.swift */; };
+		EB3866DBE2E5C6E5A6CFC23D /* WsRequestI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386744D7B8102E11B3C19B /* WsRequestI.swift */; };
+		EB38686CE5EB611EC757B38E /* WsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38658F5AE2DC6E782A5553 /* WsRequest.swift */; };
+		EB3868944836CE2E644553E7 /* WsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3868EAC168D45B41CBFE3D /* WsBody.swift */; };
+		EB3869AE457B14A1FD8540FC /* WsRequestQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386570BCFE045E0CC7DCB9 /* WsRequestQueryParams.swift */; };
+		EB386B3F985CA0A876024DC8 /* WsWebServiceOnUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3860C4912272208F8B823B /* WsWebServiceOnUrlSession.swift */; };
+		EB386D794E3F6153D5AF15C0 /* WsRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3861ABB18C0CA2D85E449E /* WsRequestHeader.swift */; };
+		EB386D8F186059047859FAEC /* WsRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386F59BE565434B5F3B4F2 /* WsRequestMethod.swift */; };
+		EB386EF6CB0A63B5B55AB8BA /* WsWebServiceLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3861DB96465332886AD28B /* WsWebServiceLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +49,26 @@
 		B233A95E248FE21700EE5F77 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B233A960248FE21700EE5F77 /* Sqs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sqs.h; sourceTree = "<group>"; };
 		B233A968248FE26400EE5F77 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B233A9AC2490001900EE5F77 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
+		B233A9AD2490001900EE5F77 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
+		B233A9B0249001F000EE5F77 /* wlog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = wlog.framework; path = Carthage/Build/iOS/wlog.framework; sourceTree = "<group>"; };
+		EB3860C4912272208F8B823B /* WsWebServiceOnUrlSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsWebServiceOnUrlSession.swift; sourceTree = "<group>"; };
+		EB3861ABB18C0CA2D85E449E /* WsRequestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestHeader.swift; sourceTree = "<group>"; };
+		EB3861DB96465332886AD28B /* WsWebServiceLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsWebServiceLog.swift; sourceTree = "<group>"; };
+		EB3862E054A670603CD920AC /* WsWebServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsWebServiceOperation.swift; sourceTree = "<group>"; };
+		EB3863964D78D3A963EFC839 /* WsWebResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsWebResponse.swift; sourceTree = "<group>"; };
+		EB386570BCFE045E0CC7DCB9 /* WsRequestQueryParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestQueryParams.swift; sourceTree = "<group>"; };
+		EB38658F5AE2DC6E782A5553 /* WsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequest.swift; sourceTree = "<group>"; };
+		EB3865988D11527A310CD218 /* WsRequestURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestURL.swift; sourceTree = "<group>"; };
+		EB38663382B71F2617E2930F /* WsWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsWebService.swift; sourceTree = "<group>"; };
+		EB386744D7B8102E11B3C19B /* WsRequestI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestI.swift; sourceTree = "<group>"; };
+		EB38680FAE62AFFFE149AB1C /* WsRequestWrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestWrap.swift; sourceTree = "<group>"; };
+		EB38684EB107ACCD3B308688 /* WsJsonBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsJsonBody.swift; sourceTree = "<group>"; };
+		EB38688E992BFD91675BCF56 /* WsRequestJsonBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestJsonBody.swift; sourceTree = "<group>"; };
+		EB3868EAC168D45B41CBFE3D /* WsBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsBody.swift; sourceTree = "<group>"; };
+		EB386EFB80B2FB4DA10E820B /* WsRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestBody.swift; sourceTree = "<group>"; };
+		EB386F59BE565434B5F3B4F2 /* WsRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestMethod.swift; sourceTree = "<group>"; };
+		EB386F9FB160502396C2EDF7 /* WsDataBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsDataBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B233A9B1249001F000EE5F77 /* wlog.framework in Frameworks */,
+				B233A9AE2490001900EE5F77 /* FBLPromises.framework in Frameworks */,
+				B233A9AF2490001900EE5F77 /* Promises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +98,7 @@
 			children = (
 				B233A95B248FE21700EE5F77 /* Source */,
 				B233A942248FE1BF00EE5F77 /* Products */,
+				B233A9AB2490001900EE5F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +142,7 @@
 		B233A966248FE25C00EE5F77 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EB3860A9D6243F5036F5AE6B /* Web */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -108,6 +153,56 @@
 				B233A968248FE26400EE5F77 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B233A9AB2490001900EE5F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B233A9B0249001F000EE5F77 /* wlog.framework */,
+				B233A9AC2490001900EE5F77 /* FBLPromises.framework */,
+				B233A9AD2490001900EE5F77 /* Promises.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB3860A9D6243F5036F5AE6B /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				EB3868662A3741AA649532CA /* Body */,
+				EB386E17FD018C45EED765D6 /* Request */,
+				EB38663382B71F2617E2930F /* WsWebService.swift */,
+				EB3863964D78D3A963EFC839 /* WsWebResponse.swift */,
+				EB3861DB96465332886AD28B /* WsWebServiceLog.swift */,
+				EB3862E054A670603CD920AC /* WsWebServiceOperation.swift */,
+				EB3860C4912272208F8B823B /* WsWebServiceOnUrlSession.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		EB3868662A3741AA649532CA /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				EB3868EAC168D45B41CBFE3D /* WsBody.swift */,
+				EB386F9FB160502396C2EDF7 /* WsDataBody.swift */,
+				EB38684EB107ACCD3B308688 /* WsJsonBody.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		EB386E17FD018C45EED765D6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EB38658F5AE2DC6E782A5553 /* WsRequest.swift */,
+				EB386744D7B8102E11B3C19B /* WsRequestI.swift */,
+				EB3865988D11527A310CD218 /* WsRequestURL.swift */,
+				EB386EFB80B2FB4DA10E820B /* WsRequestBody.swift */,
+				EB38680FAE62AFFFE149AB1C /* WsRequestWrap.swift */,
+				EB3861ABB18C0CA2D85E449E /* WsRequestHeader.swift */,
+				EB386F59BE565434B5F3B4F2 /* WsRequestMethod.swift */,
+				EB38688E992BFD91675BCF56 /* WsRequestJsonBody.swift */,
+				EB386570BCFE045E0CC7DCB9 /* WsRequestQueryParams.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +314,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3868944836CE2E644553E7 /* WsBody.swift in Sources */,
+				EB38641B818B9A2F04C0F487 /* WsDataBody.swift in Sources */,
+				EB386390500756F83CE7DCCE /* WsJsonBody.swift in Sources */,
+				EB38686CE5EB611EC757B38E /* WsRequest.swift in Sources */,
+				EB3866DBE2E5C6E5A6CFC23D /* WsRequestI.swift in Sources */,
+				EB386386C77781A4EA202B14 /* WsRequestURL.swift in Sources */,
+				EB38651AFB3BCEB4F1768301 /* WsRequestBody.swift in Sources */,
+				EB3865CA797FA2DF008ABEEE /* WsRequestWrap.swift in Sources */,
+				EB386D794E3F6153D5AF15C0 /* WsRequestHeader.swift in Sources */,
+				EB386D8F186059047859FAEC /* WsRequestMethod.swift in Sources */,
+				EB3864B80F7CC16D991F5F10 /* WsRequestJsonBody.swift in Sources */,
+				EB3869AE457B14A1FD8540FC /* WsRequestQueryParams.swift in Sources */,
+				EB386038B52CE54B5217CC20 /* WsWebService.swift in Sources */,
+				EB3865F2C4DB23BA7ED7E794 /* WsWebResponse.swift in Sources */,
+				EB386EF6CB0A63B5B55AB8BA /* WsWebServiceLog.swift in Sources */,
+				EB3862D8D2FE17E09A4A3ABF /* WsWebServiceOperation.swift in Sources */,
+				EB386B3F985CA0A876024DC8 /* WsWebServiceOnUrlSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +482,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -394,6 +510,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
