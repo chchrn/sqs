@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sqs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let webService = WsWebServiceOnUrlSession(urlSession: URLSession.shared, maxConcurrentOperationCount: 20)
+        
         return true
     }
 
