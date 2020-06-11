@@ -8,17 +8,24 @@
 
 import UIKit
 import Sqs
+import wlog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private var webService: WsWebService?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let webService = WsWebServiceOnUrlSession(urlSession: URLSession.shared, maxConcurrentOperationCount: 20)
-        
+
+        self.webService = WsWebServiceLog(
+                WsWebServiceOnUrlSession(urlSession: URLSession.shared, maxConcurrentOperationCount: 20),
+                log: OsLog(category: "network")
+        )
+        self.webService?.send(request: TestWebQuery().request()!,
+                              priority: 1.0,
+                              progressBlock: nil)
+
         return true
     }
 

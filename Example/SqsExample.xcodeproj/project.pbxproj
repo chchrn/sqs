@@ -15,6 +15,7 @@
 		B233A983248FE2A600EE5F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B233A981248FE2A600EE5F77 /* LaunchScreen.storyboard */; };
 		B233A9C82490836800EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9C52490835D00EE5F77 /* Sqs.framework */; };
 		B233A9CB2490837700EE5F77 /* wlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9CA2490837700EE5F77 /* wlog.framework */; };
+		EB3860F38A485380D6CC3395 /* TestWebQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386BB69011F49C6987A8B7 /* TestWebQuery.swift */; };
 		EB3868D74451DBE753C6D184 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3868F8A994E9A969E889AB /* FBLPromises.framework */; };
 		EB386B3169B0DE3EC86DF96C /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB386BA840E32ABF92B49CA3 /* Promises.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		EB3868F8A994E9A969E889AB /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = /Users/chchrn/Work/sqs/Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<absolute>"; };
 		EB386BA51AC8832ACEAB9516 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		EB386BA840E32ABF92B49CA3 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = /Users/chchrn/Work/sqs/Carthage/Build/iOS/Promises.framework; sourceTree = "<absolute>"; };
+		EB386BB69011F49C6987A8B7 /* TestWebQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B233A97F248FE2A600EE5F77 /* Assets.xcassets */,
 				B233A981248FE2A600EE5F77 /* LaunchScreen.storyboard */,
 				B233A984248FE2A600EE5F77 /* Info.plist */,
+				EB386BB69011F49C6987A8B7 /* TestWebQuery.swift */,
 			);
 			path = SqsExample;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				B233A97B248FE2A400EE5F77 /* ViewController.swift in Sources */,
 				B233A977248FE2A400EE5F77 /* AppDelegate.swift in Sources */,
 				B233A979248FE2A400EE5F77 /* SceneDelegate.swift in Sources */,
+				EB3860F38A485380D6CC3395 /* TestWebQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
