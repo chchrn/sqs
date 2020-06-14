@@ -6,8 +6,8 @@
 import Foundation
 
 @objc public class WsWebResponse: NSObject {
-    let data: Data
-    let urlResponse: URLResponse
+    public let data: Data
+    public let urlResponse: URLResponse
 
     init(data: Data, urlResponse: URLResponse) {
         self.data = data
