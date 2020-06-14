@@ -37,7 +37,7 @@ public class SqsWebExecutor: SqsExecutor {
                                                priority: webQuery.priority().rawValue,
                                                progressBlock: progressBlock).then(on: self.queue) { (response: WsWebResponse) -> Promise<Q.TResponse> in
                 do {
-                    let queryResult = try webQuery.parse(data: response.data) as! Q.TResponse
+                    let queryResult = try webQuery.parse(response: response) as! Q.TResponse
                     return Promise(queryResult)
                 } catch {
                     return Promise(error)

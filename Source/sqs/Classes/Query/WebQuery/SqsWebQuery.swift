@@ -28,7 +28,7 @@ public protocol SqsWebQuery {
     // TODO: need return concrete class,
     // but cant do it without creating abstract class
     // for webQuery instead of this protocol
-    func parse(data: Data) throws -> Any
+    func parse(response: WsWebResponse) throws -> Any
 }
 
 public protocol SqsWebQueryWithProgress: SqsWebQuery {

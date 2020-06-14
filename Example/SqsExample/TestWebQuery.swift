@@ -31,7 +31,7 @@ extension TestWebQuery: SqsWebQuery {
         return .high
     }
 
-    func parse(data: Data) throws -> Any {
+    func parse(response: WsWebResponse) throws -> Any {
         return ["success"]
     }
 }
