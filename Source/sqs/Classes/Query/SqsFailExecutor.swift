@@ -11,9 +11,13 @@ public class SqsFailExecutor: SqsExecutor {
         case undefined
     }
 
-    public init() {}
+    private let error: Error
+
+    public init(error: Error = FailError.undefined) {
+        self.error = error
+    }
 
     public func execute<Q: SqsQuery>(_ query: Q) -> Promise<Q.TResponse> {
-        return Promise(Self.FailError.undefined)
+        return Promise(self.error)
     }
 }
