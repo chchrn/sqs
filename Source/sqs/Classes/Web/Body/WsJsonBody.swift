@@ -12,7 +12,7 @@ public class WsJsonBody: WsBody {
         self.params = params
     }
 
-    init(array: [[String: Any]]) {
+    init(array: [Any]) {
         self.params = array
     }
 
