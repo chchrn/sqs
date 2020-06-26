@@ -6,13 +6,28 @@
 import Foundation
 
 @objc public class WsRequestJsonBody: WsRequestWrap {
-    @objc public init(_ origin: WsRequestI,
-               parameters: [String: Any]) {
+    @objc public convenience init(_ origin: WsRequestI,
+                                  parameters: [String: Any]) {
+        self.init(origin, body: WsJsonBody(params: parameters))
+    }
+
+    @objc public convenience init(_ origin: WsRequestI,
+                                  array: [[String: Any]]) {
+        self.init(origin, body: WsJsonBody(array: array))
+    }
+
+    public required init(_ origin: WsRequestI,
+                         body: WsJsonBody) {
         super.init(
                 WsRequestHeader(
                         WsRequestBody(
                                 origin,
-                                body: WsJsonBody(params: parameters)),
-                        headers: ["Content-Type": "application/json"]))
+                                body: body),
+                        headers: ["Content-Type": "application/json"]
+                )
+        )
     }
+
+
+
 }

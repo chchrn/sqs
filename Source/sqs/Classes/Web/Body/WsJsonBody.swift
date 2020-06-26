@@ -6,10 +6,14 @@
 import Foundation
 
 public class WsJsonBody: WsBody {
-    private let params: [String: Any]
+    private let params: Any
 
     init(params: [String: Any]) {
         self.params = params
+    }
+
+    init(array: [[String: Any]]) {
+        self.params = array
     }
 
     public func body() throws -> Data {
