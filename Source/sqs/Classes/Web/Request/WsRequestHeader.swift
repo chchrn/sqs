@@ -10,7 +10,7 @@ import Foundation
     private let headers: [String: String]
 
     @objc public init(_ origin: WsRequestI,
-               headers: [String: String]) {
+                      headers: [String: String]) {
         self.origin = origin
         self.headers = headers
     }

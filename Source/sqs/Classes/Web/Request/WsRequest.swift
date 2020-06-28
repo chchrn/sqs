@@ -12,10 +12,11 @@ import Foundation
                       path: String = "",
                       queryParams: QueryParams = QueryParams()) {
         super.init(
-                WsRequestQueryParams(
-                        WsRequestURL(baseUrl: baseUrl,
-                                     path: path),
-                        queryParams: queryParams)
+            WsRequestQueryParams(
+                WsRequestURL(baseUrl: baseUrl,
+                             path: path),
+                queryParams: queryParams
+            )
         )
     }
 }

@@ -17,7 +17,7 @@ public class SqsFailExecutor: SqsExecutor {
         self.error = error
     }
 
-    public func execute<Q: SqsQuery>(_ query: Q) -> Promise<Q.TResponse> {
+    public func execute<Q: SqsQuery>(_: Q) -> Promise<Q.TResponse> {
         return Promise(self.error)
     }
 }

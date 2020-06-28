@@ -26,7 +26,7 @@ public class SqsWebExecutor: SqsExecutor {
 
     public func execute<Q: SqsQuery>(_ query: Q) -> Promise<Q.TResponse> {
         if let webQuery = query as? SqsWebQuery,
-           let req = webQuery.request() {
+            let req = webQuery.request() {
             var progressBlock: WsWebService.ProgressBlock?
             if let progressQuery = webQuery as? SqsWebQueryWithProgress {
                 progressBlock = progressQuery.progressHandler()
@@ -44,8 +44,10 @@ public class SqsWebExecutor: SqsExecutor {
                 }
             }.catch { error in
                 self.log.error("Fail query",
-                               parameters: ["query": query,
-                                            "error": error.localizedDescription])
+                               parameters: [
+                                   "query": query,
+                                   "error": error.localizedDescription,
+                               ])
             }
             return promise
         } else {

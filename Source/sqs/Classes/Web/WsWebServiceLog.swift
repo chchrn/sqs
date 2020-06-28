@@ -20,11 +20,10 @@ import wlog
     public func send(request: WsRequestI,
                      priority: Float,
                      progressBlock: ProgressBlock?) -> Promises.Promise<WsWebResponse> {
-
         self.log.info("start_web_request",
                       parameters: [
                           "req": request.urlRequest().sqs_detailedDescription(),
-                          "priority": "\(priority)"
+                          "priority": "\(priority)",
                       ])
 
         let start = CFAbsoluteTimeGetCurrent()
@@ -36,14 +35,12 @@ import wlog
                               "req": request.urlRequest(),
                               "priority": "\(priority)",
                               "msec": Int((CFAbsoluteTimeGetCurrent() - start) * 1000),
-                              "data.size_kb": Int(response.data.count / 1024)
+                              "data.size_kb": Int(response.data.count / 1024),
                           ])
             return response
-        }.catch { error in
+        }.catch { _ in
             self.log.error("fail_web_request",
-                           parameters:  [
-                               "req": request.urlRequest()
-                           ])
+                           parameters: ["req": request.urlRequest()])
         }
     }
 }

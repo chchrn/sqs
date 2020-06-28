@@ -43,7 +43,7 @@ public class WsRequestQueryParams: WsRequestI {
             return ""
         }
         components = components.filter { (string: String) -> Bool in
-            return string.count > 0
+            string.count > 0
         }
 
         return components.joined(separator: "&")

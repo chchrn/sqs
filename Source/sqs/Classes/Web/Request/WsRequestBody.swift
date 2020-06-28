@@ -10,12 +10,13 @@ import Foundation
     private let body: WsBody
 
     public init(_ origin: WsRequestI,
-         body: WsBody) {
+                body: WsBody) {
         self.origin = origin
         self.body = body
     }
 
     // MARK: WsRequestI
+
     @objc public func urlRequest() -> URLRequest {
         var request = self.origin.urlRequest()
         do {

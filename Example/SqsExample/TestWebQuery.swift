@@ -6,24 +6,24 @@
 import Foundation
 import Sqs
 
-class TestWebQuery: SqsQuery  {
+class TestWebQuery: SqsQuery {
     typealias TResponse = [String]
 }
 
 extension TestWebQuery: SqsWebQuery {
     func request() -> WsRequestI? {
         let r =
-                WsRequestMethod(
-                        WsRequestJsonBody(
-                                WsRequest(baseUrl: URL(string: "https://google.com")!,
-                                          path: "/apiTest"),
-                                parameters: [
-                                    "var1": "value1",
-                                    "var2": "value2"
-                                ]
-                        ),
-                        method: "POST"
-                )
+            WsRequestMethod(
+                WsRequestJsonBody(
+                    WsRequest(baseUrl: URL(string: "https://google.com")!,
+                              path: "/apiTest"),
+                    parameters: [
+                        "var1": "value1",
+                        "var2": "value2",
+                    ]
+                ),
+                method: "POST"
+            )
         return r
     }
 
@@ -31,8 +31,7 @@ extension TestWebQuery: SqsWebQuery {
         return .high
     }
 
-    func parse(response: WsWebResponse) throws -> Any {
+    func parse(response _: WsWebResponse) throws -> Any {
         return ["success"]
     }
 }
-

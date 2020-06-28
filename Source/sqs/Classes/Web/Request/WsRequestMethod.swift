@@ -15,6 +15,7 @@ import Foundation
     }
 
     // MARK: WsRequestI
+
     @objc public func urlRequest() -> URLRequest {
         var request = self.origin.urlRequest()
         request.httpMethod = self.method

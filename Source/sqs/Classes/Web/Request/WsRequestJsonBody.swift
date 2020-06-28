@@ -19,15 +19,13 @@ import Foundation
     public required init(_ origin: WsRequestI,
                          body: WsJsonBody) {
         super.init(
-                WsRequestHeader(
-                        WsRequestBody(
-                                origin,
-                                body: body),
-                        headers: ["Content-Type": "application/json"]
-                )
+            WsRequestHeader(
+                WsRequestBody(
+                    origin,
+                    body: body
+                ),
+                headers: ["Content-Type": "application/json"]
+            )
         )
     }
-
-
-
 }
