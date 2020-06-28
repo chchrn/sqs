@@ -12,7 +12,7 @@ import Foundation
     }
 
     @objc public convenience init(_ origin: WsRequestI,
-                                  array: [[String: Any]]) {
+                                  array: [Any]) {
         self.init(origin, body: WsJsonBody(array: array))
     }
 
