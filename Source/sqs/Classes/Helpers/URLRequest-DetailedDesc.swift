@@ -29,7 +29,7 @@ extension URLRequest {
         }
 
         if let httpBody = self.httpBody,
-           let jsonStr = httpBody.sqs_prettyPrintedJSONString() {
+           let jsonStr = httpBody.sqs_prettyPrintedJSONString {
             desc += "\nBODY: \(jsonStr)"
         }
 
