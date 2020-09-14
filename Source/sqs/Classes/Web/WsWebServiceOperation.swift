@@ -62,8 +62,7 @@ internal class WsWebServiceOperation: Operation {
     override func start() {
         self.isExecuting = true
         let urlRequest = self.request.urlRequest()
-        let task = self.urlSession.dataTask(with: urlRequest
-        ) { [weak self] (data: Data?, urlResponse: URLResponse?, error: Error?) -> Void in
+        let task = self.urlSession.dataTask(with: urlRequest) { [weak self] (data: Data?, urlResponse: URLResponse?, error: Error?) -> Void in
             guard let strongSelf = self else { return }
             if error != nil {
                 strongSelf.handle(error: error!)

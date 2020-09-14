@@ -5,12 +5,14 @@
 
 import Foundation
 
-@objc public class WsRequestHeader: NSObject, WsRequestI {
+@objc
+public class WsRequestHeader: NSObject, WsRequestI {
     private let origin: WsRequestI
     private let headers: [String: String]
 
-    @objc public init(_ origin: WsRequestI,
-                      headers: [String: String]) {
+    @objc
+    public init(_ origin: WsRequestI,
+                headers: [String: String]) {
         self.origin = origin
         self.headers = headers
     }

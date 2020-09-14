@@ -6,7 +6,8 @@
 import Foundation
 import Promises
 
-@objc public class WsWebServiceOnUrlSession: NSObject, WsWebService {
+@objc
+public class WsWebServiceOnUrlSession: NSObject, WsWebService {
     private let urlSession: URLSession
     private let queue: OperationQueue
 

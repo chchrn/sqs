@@ -5,7 +5,8 @@
 
 import Foundation
 
-@objc public class WsRequestBody: NSObject, WsRequestI {
+@objc
+public class WsRequestBody: NSObject, WsRequestI {
     private let origin: WsRequestI
     private let body: WsBody
 
@@ -17,7 +18,8 @@ import Foundation
 
     // MARK: WsRequestI
 
-    @objc public func urlRequest() -> URLRequest {
+    @objc
+    public func urlRequest() -> URLRequest {
         var request = self.origin.urlRequest()
         do {
             let body = try self.body.body()

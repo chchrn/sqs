@@ -5,7 +5,8 @@
 
 import Foundation
 
-@objc public class WsRequestJsonBody: WsRequestWrap {
+@objc
+public class WsRequestJsonBody: WsRequestWrap {
     @objc public convenience init(_ origin: WsRequestI,
                                   parameters: [String: Any]) {
         self.init(origin, body: WsJsonBody(params: parameters))

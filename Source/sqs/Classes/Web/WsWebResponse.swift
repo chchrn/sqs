@@ -5,7 +5,8 @@
 
 import Foundation
 
-@objc public class WsWebResponse: NSObject {
+@objc
+public class WsWebResponse: NSObject {
     public let data: Data
     public let urlResponse: URLResponse
 

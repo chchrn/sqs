@@ -5,11 +5,13 @@
 
 import Foundation
 
-@objc public class WsRequestURL: NSObject, WsRequestI {
+@objc
+public class WsRequestURL: NSObject, WsRequestI {
     private let baseUrl: URL
     private let path: String
 
-    @objc public init(baseUrl: URL, path: String = "") {
+    @objc
+    public init(baseUrl: URL, path: String = "") {
         self.baseUrl = baseUrl
         self.path = path
     }

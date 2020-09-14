@@ -5,12 +5,14 @@
 
 import Foundation
 
-@objc public class WsRequest: WsRequestWrap {
+@objc
+public class WsRequest: WsRequestWrap {
     public typealias QueryParams = [String: Any]
 
-    @objc public init(baseUrl: URL,
-                      path: String = "",
-                      queryParams: QueryParams = QueryParams()) {
+    @objc
+    public init(baseUrl: URL,
+                path: String = "",
+                queryParams: QueryParams = QueryParams()) {
         super.init(
             WsRequestQueryParams(
                 WsRequestURL(baseUrl: baseUrl,

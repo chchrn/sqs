@@ -7,7 +7,8 @@ import Foundation
 import Promises
 import wlog
 
-@objc public class WsWebServiceLog: NSObject, WsWebService {
+@objc
+public class WsWebServiceLog: NSObject, WsWebService {
     private let log: Log
     private let origin: WsWebService
 
