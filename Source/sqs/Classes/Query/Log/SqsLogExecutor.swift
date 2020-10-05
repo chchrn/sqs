@@ -11,7 +11,7 @@ public class SqsLogExecutor: SqsExecutor {
     private let origin: SqsExecutor
     private let log: Log
 
-    public init(origin: SqsExecutor,
+    public init(_ origin: SqsExecutor,
                 log: Log) {
         self.origin = origin
         self.log = log
