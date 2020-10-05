@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		627F03BE252AF42000A5EBD3 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AC2490001900EE5F77 /* FBLPromises.framework */; };
+		627F03BF252AF42000A5EBD3 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AD2490001900EE5F77 /* Promises.framework */; };
+		627F03C0252AF42000A5EBD3 /* wlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9B0249001F000EE5F77 /* wlog.framework */; };
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B233A9A1248FE3DB00EE5F77 /* SqsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233A95D248FE21700EE5F77 /* SqsTests.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		627F03C5252AF54300A5EBD3 /* output.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
+		627F03C6252AF54300A5EBD3 /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
+		AED7E6600961D7AF3F1DD153 /* carthage-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
 		B233A941248FE1BF00EE5F77 /* Sqs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sqs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A94A248FE1BF00EE5F77 /* SqsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A95D248FE21700EE5F77 /* SqsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsTests.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */,
+				627F03BE252AF42000A5EBD3 /* FBLPromises.framework in Frameworks */,
+				627F03BF252AF42000A5EBD3 /* Promises.framework in Frameworks */,
+				627F03C0252AF42000A5EBD3 /* wlog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +124,7 @@
 				B233A95B248FE21700EE5F77 /* Source */,
 				B233A942248FE1BF00EE5F77 /* Products */,
 				B233A9AB2490001900EE5F77 /* Frameworks */,
+				AED7E6600961D7AF3F1DD153 /* carthage-build.sh */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +149,8 @@
 		B233A95C248FE21700EE5F77 /* sqsTests */ = {
 			isa = PBXGroup;
 			children = (
+				627F03C6252AF54300A5EBD3 /* input.xcfilelist */,
+				627F03C5252AF54300A5EBD3 /* output.xcfilelist */,
 				B233A95D248FE21700EE5F77 /* SqsTests.swift */,
 				B233A95E248FE21700EE5F77 /* Info.plist */,
 			);
@@ -300,6 +312,7 @@
 				B233A946248FE1BF00EE5F77 /* Sources */,
 				B233A947248FE1BF00EE5F77 /* Frameworks */,
 				B233A948248FE1BF00EE5F77 /* Resources */,
+				627F03C7252AF54F00A5EBD3 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -364,6 +377,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		627F03C7252AF54F00A5EBD3 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Source/sqsTests/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Source/sqsTests/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B233A93D248FE1BF00EE5F77 /* Sources */ = {
@@ -600,6 +636,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HW3W3W6KB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Carthage/Build/iOS\"",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Source/sqsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,6 +658,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HW3W3W6KB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Carthage/Build/iOS\"",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Source/sqsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
