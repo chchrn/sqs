@@ -12,7 +12,7 @@ public class SqsWebExecutor: SqsExecutor {
     private let webService: WsWebService
     private let parseQueue: DispatchQueue
 
-    public init(origin: SqsExecutor,
+    public init(_ origin: SqsExecutor,
                 webService: WsWebService,
                 parseQueue: DispatchQueue = DispatchQueue(label: "com.sqs.parsing",
                                                           attributes: .concurrent)) {
