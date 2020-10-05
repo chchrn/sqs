@@ -5,6 +5,7 @@
 
 import Foundation
 
-@objc public protocol WsBody {
+@objc
+public protocol WsBody {
     func body() throws -> Data
 }

@@ -39,11 +39,11 @@ internal class WsWebServiceOperation: Operation {
     override var isFinished: Bool {
         set {
             willChangeValue(forKey: "isFinished")
-            p_isFinished = newValue
+            self.p_isFinished = newValue
             didChangeValue(forKey: "isFinished")
         }
         get {
-            return p_isFinished
+            return self.p_isFinished
         }
     }
 
@@ -62,9 +62,8 @@ internal class WsWebServiceOperation: Operation {
     override func start() {
         self.isExecuting = true
         let urlRequest = self.request.urlRequest()
-        let task = self.urlSession.dataTask(with: urlRequest
-        ) { [weak self] (data: Data?, urlResponse: URLResponse?, error: Error?) -> Void in
-            guard let strongSelf = self else {return}
+        let task = self.urlSession.dataTask(with: urlRequest) { [weak self] (data: Data?, urlResponse: URLResponse?, error: Error?) -> Void in
+            guard let strongSelf = self else { return }
             if error != nil {
                 strongSelf.handle(error: error!)
             } else {
@@ -116,7 +115,7 @@ internal class WsWebServiceOperation: Operation {
     }
 
     private func subscribeToProgress() {
-        if self.isProgressSubscribed == false && self.task != nil {
+        if self.isProgressSubscribed == false, self.task != nil {
             self.isProgressSubscribed = true
             if #available(iOS 11, *) {
                 self.task?.progress.addObserver(self,
@@ -128,7 +127,7 @@ internal class WsWebServiceOperation: Operation {
     }
 
     private func unsubscribeFromProgress() {
-        if self.isProgressSubscribed == true && self.task != nil {
+        if self.isProgressSubscribed == true, self.task != nil {
             self.isProgressSubscribed = false
             if #available(iOS 11, *) {
                 self.task?.progress.removeObserver(self,

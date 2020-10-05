@@ -5,19 +5,21 @@
 
 import Foundation
 
-@objc public class WsRequestURL: NSObject, WsRequestI {
+@objc
+public class WsRequestURL: NSObject, WsRequestI {
     private let baseUrl: URL
     private let path: String
 
-    @objc public init(baseUrl: URL, path: String = "") {
+    @objc
+    public init(baseUrl: URL, path: String = "") {
         self.baseUrl = baseUrl
         self.path = path
     }
 
     public func urlRequest() -> URLRequest {
         var url = self.baseUrl
-        if path.isEmpty == false {
-            url = url.appendingPathComponent(path)
+        if self.path.isEmpty == false {
+            url = url.appendingPathComponent(self.path)
         }
         return URLRequest(url: url)
     }

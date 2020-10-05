@@ -5,6 +5,7 @@
 
 import Foundation
 
-@objc public protocol WsRequestI {
+@objc
+public protocol WsRequestI {
     func urlRequest() -> URLRequest
 }

@@ -148,7 +148,7 @@
 				B233A96F248FE2A400EE5F77 /* Sources */,
 				B233A970248FE2A400EE5F77 /* Frameworks */,
 				B233A971248FE2A400EE5F77 /* Resources */,
-				B233A9B62490045E00EE5F77 /* ShellScript */,
+				B233A9B62490045E00EE5F77 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -229,7 +229,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B233A9B62490045E00EE5F77 /* ShellScript */ = {
+		B233A9B62490045E00EE5F77 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +239,7 @@
 			);
 			inputPaths = (
 			);
+			name = Carthage;
 			outputFileListPaths = (
 				"$(SRCROOT)/SqsExample/Frameworks/output.xcfilelist",
 			);

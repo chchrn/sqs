@@ -33,7 +33,7 @@ public class SqsRetryExecutor: SqsExecutor {
         }.catch { error in
             if retryCount > 0 {
                 self.execute(query,
-                             retryCount: (retryCount-1),
+                             retryCount: retryCount - 1,
                              pendingPromise: pendingPromise)
             } else {
                 pendingPromise.reject(error)

@@ -5,18 +5,21 @@
 
 import Foundation
 
-@objc public class WsRequestBody: NSObject, WsRequestI {
+@objc
+public class WsRequestBody: NSObject, WsRequestI {
     private let origin: WsRequestI
     private let body: WsBody
 
     public init(_ origin: WsRequestI,
-         body: WsBody) {
+                body: WsBody) {
         self.origin = origin
         self.body = body
     }
 
     // MARK: WsRequestI
-    @objc public func urlRequest() -> URLRequest {
+
+    @objc
+    public func urlRequest() -> URLRequest {
         var request = self.origin.urlRequest()
         do {
             let body = try self.body.body()
