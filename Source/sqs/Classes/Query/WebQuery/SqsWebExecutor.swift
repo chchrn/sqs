@@ -15,7 +15,7 @@ public class SqsWebExecutor: SqsExecutor {
     public init(origin: SqsExecutor,
                 webService: WsWebService,
                 parseQueue: DispatchQueue = DispatchQueue(label: "com.sqs.parsing",
-                                                     attributes: .concurrent)) {
+                                                          attributes: .concurrent)) {
         self.origin = origin
         self.webService = webService
         self.parseQueue = parseQueue
