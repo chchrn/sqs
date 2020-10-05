@@ -10,6 +10,7 @@
 		627F03BE252AF42000A5EBD3 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AC2490001900EE5F77 /* FBLPromises.framework */; };
 		627F03BF252AF42000A5EBD3 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AD2490001900EE5F77 /* Promises.framework */; };
 		627F03C0252AF42000A5EBD3 /* wlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9B0249001F000EE5F77 /* wlog.framework */; };
+		AED7EE01D0DD2B871D6C20A0 /* SqsLogExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */; };
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B233A9A1248FE3DB00EE5F77 /* SqsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233A95D248FE21700EE5F77 /* SqsTests.swift */; };
@@ -54,6 +55,7 @@
 		627F03C5252AF54300A5EBD3 /* output.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
 		627F03C6252AF54300A5EBD3 /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		AED7E6600961D7AF3F1DD153 /* carthage-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
+		AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsLogExecutor.swift; sourceTree = "<group>"; };
 		AED7EA834443245DCE38B0E8 /* swiftformat.cfg */ = {isa = PBXFileReference; lastKnownFileType = file.cfg; path = swiftformat.cfg; sourceTree = "<group>"; };
 		AED7EC2C00BF84C57DA8F26B /* precommit.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = precommit.sh; sourceTree = "<group>"; };
 		B233A941248FE1BF00EE5F77 /* Sqs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sqs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,14 @@
 				AED7EA834443245DCE38B0E8 /* swiftformat.cfg */,
 			);
 			path = scripts;
+			sourceTree = "<group>";
+		};
+		AED7E98A07FA0D7363FAC51E /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		B233A937248FE1BF00EE5F77 = {
@@ -241,6 +251,7 @@
 				EB38624F8BAF1EF73F8BD610 /* SqsQuery.swift */,
 				EB386AB96FD735B364CE8F04 /* SqsExecutor.swift */,
 				EB386255A4F57FF14F9EDED8 /* SqsFailExecutor.swift */,
+				AED7E98A07FA0D7363FAC51E /* Log */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -456,6 +467,7 @@
 				EB386B6BCB9E5BA7C5A8DA34 /* SqsExecutor.swift in Sources */,
 				EB3869F5D93A3173A4DF015A /* SqsFailExecutor.swift in Sources */,
 				EB38696AA97F3A9BD35881B3 /* URLRequest-DetailedDesc.swift in Sources */,
+				AED7EE01D0DD2B871D6C20A0 /* SqsLogExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
