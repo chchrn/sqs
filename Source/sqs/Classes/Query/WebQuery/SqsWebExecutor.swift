@@ -10,18 +10,15 @@ import wlog
 public class SqsWebExecutor: SqsExecutor {
     private let origin: SqsExecutor
     private let webService: WsWebService
-    private let queue: DispatchQueue
-    private let log: Log
+    private let parseQueue: DispatchQueue
 
     public init(origin: SqsExecutor,
                 webService: WsWebService,
-                queue: DispatchQueue = DispatchQueue(label: "com.sqs.parsing",
-                                                     attributes: .concurrent),
-                log: Log = NullLog()) {
+                parseQueue: DispatchQueue = DispatchQueue(label: "com.sqs.parsing",
+                                                     attributes: .concurrent)) {
         self.origin = origin
         self.webService = webService
-        self.queue = queue
-        self.log = log
+        self.parseQueue = parseQueue
     }
 
     public func execute<Q: SqsQuery>(_ query: Q) -> Promise<Q.TResponse> {
@@ -32,22 +29,15 @@ public class SqsWebExecutor: SqsExecutor {
                 progressBlock = progressQuery.progressHandler()
             }
 
-            self.log.info("Starting query", parameters: ["query": query])
             let promise = self.webService.send(request: req,
                                                priority: webQuery.priority().rawValue,
-                                               progressBlock: progressBlock).then(on: self.queue) { (response: WsWebResponse) -> Promise<Q.TResponse> in
+                                               progressBlock: progressBlock).then(on: self.parseQueue) { (response: WsWebResponse) -> Promise<Q.TResponse> in
                 do {
                     let queryResult = try webQuery.parse(response: response) as! Q.TResponse
                     return Promise(queryResult)
                 } catch {
                     return Promise(error)
                 }
-            }.catch { error in
-                self.log.error("Fail query",
-                               parameters: [
-                                   "query": query,
-                                   "error": error.localizedDescription,
-                               ])
             }
             return promise
         } else {
