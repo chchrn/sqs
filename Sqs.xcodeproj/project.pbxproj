@@ -13,9 +13,6 @@
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B233A9A1248FE3DB00EE5F77 /* SqsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233A95D248FE21700EE5F77 /* SqsTests.swift */; };
-		B233A9AE2490001900EE5F77 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AC2490001900EE5F77 /* FBLPromises.framework */; };
-		B233A9AF2490001900EE5F77 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9AD2490001900EE5F77 /* Promises.framework */; };
-		B233A9B1249001F000EE5F77 /* wlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A9B0249001F000EE5F77 /* wlog.framework */; };
 		EB386038B52CE54B5217CC20 /* WsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38663382B71F2617E2930F /* WsWebService.swift */; };
 		EB3860AD9A26311B00034D78 /* SqsRetryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3868428DCC0DB532ADB263 /* SqsRetryQuery.swift */; };
 		EB38616727AB1644DFD21A41 /* SqsWebQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB386078316FAE30EFC34A41 /* SqsWebQuery.swift */; };
@@ -57,6 +54,8 @@
 		627F03C5252AF54300A5EBD3 /* output.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
 		627F03C6252AF54300A5EBD3 /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		AED7E6600961D7AF3F1DD153 /* carthage-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
+		AED7EA834443245DCE38B0E8 /* swiftformat.cfg */ = {isa = PBXFileReference; lastKnownFileType = file.cfg; path = swiftformat.cfg; sourceTree = "<group>"; };
+		AED7EC2C00BF84C57DA8F26B /* precommit.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = precommit.sh; sourceTree = "<group>"; };
 		B233A941248FE1BF00EE5F77 /* Sqs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sqs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A94A248FE1BF00EE5F77 /* SqsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A95D248FE21700EE5F77 /* SqsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsTests.swift; sourceTree = "<group>"; };
@@ -98,9 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B233A9B1249001F000EE5F77 /* wlog.framework in Frameworks */,
-				B233A9AE2490001900EE5F77 /* FBLPromises.framework in Frameworks */,
-				B233A9AF2490001900EE5F77 /* Promises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AED7E738B3537642FFCE694F /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				AED7EC2C00BF84C57DA8F26B /* precommit.sh */,
+				AED7EA834443245DCE38B0E8 /* swiftformat.cfg */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		B233A937248FE1BF00EE5F77 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +130,7 @@
 				B233A942248FE1BF00EE5F77 /* Products */,
 				B233A9AB2490001900EE5F77 /* Frameworks */,
 				AED7E6600961D7AF3F1DD153 /* carthage-build.sh */,
+				AED7E738B3537642FFCE694F /* scripts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,6 +301,7 @@
 				B233A93D248FE1BF00EE5F77 /* Sources */,
 				B233A93E248FE1BF00EE5F77 /* Frameworks */,
 				B233A93F248FE1BF00EE5F77 /* Resources */,
+				627F03CD252AF6BB00A5EBD3 /* precommit */,
 			);
 			buildRules = (
 			);
@@ -398,6 +405,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+		627F03CD252AF6BB00A5EBD3 /* precommit */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = precommit;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./scripts/precommit.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -597,6 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.chchrn.sqs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -626,6 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.chchrn.sqs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
