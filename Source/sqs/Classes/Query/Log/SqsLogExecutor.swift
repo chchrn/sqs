@@ -4,8 +4,8 @@
 //
 
 import Foundation
-import wlog
 import Promises
+import wlog
 
 public class SqsLogExecutor: SqsExecutor {
     private let origin: SqsExecutor
@@ -20,10 +20,10 @@ public class SqsLogExecutor: SqsExecutor {
     public func execute<Q: SqsQuery>(_ query: Q) -> Promises.Promise<Q.TResponse> {
         let queryDesc = String(describing: query)
         self.log.debug("start_query", parameters: ["query": queryDesc])
-        self.origin.execute(query).then { (response: Q.TResponse) -> Q.TResponse in
+        return self.origin.execute(query).then { (response: Q.TResponse) -> Q.TResponse in
             self.log.debug("success_query", parameters: ["query": queryDesc])
             return response
-        }.catch { error in
+        }.catch { _ in
             self.log.error("fail_query", parameters: ["query": queryDesc])
         }
     }
