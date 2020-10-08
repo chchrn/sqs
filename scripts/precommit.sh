@@ -1,4 +1,6 @@
-dir=`pwd`
-root_dir = dir + "/.."
+#!/usr/bin/env bash
 
-swiftformat --config "./scripts/swiftformat.cfg" ./
+#dir=`pwd`
+#root_dir = dir + "/.."
+
+#swiftformat --config "./scripts/swiftformat.cfg" ./
