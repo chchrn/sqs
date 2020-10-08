@@ -1,0 +1,3 @@
+$(SRCROOT)/../Carthage/Build/iOS/Promises.framework
+$(SRCROOT)/../Carthage/Build/iOS/FBLPromises.framework
+$(SRCROOT)/../Carthage/Build/iOS/wlog.framework

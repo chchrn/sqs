@@ -1,0 +1,10 @@
+
+/Carthage/
+/Example/.idea/
+/Example/SqsExample.xcodeproj/xcuserdata/
+/Example/SqsExample.xcodeproj/project.xcworkspace/xcuserdata/
+/Example/SqsExample/.idea/
+
+/.idea/
+/Sqs.xcodeproj/xcuserdata/
+/Sqs.xcodeproj/project.xcworkspace/xcuserdata/
