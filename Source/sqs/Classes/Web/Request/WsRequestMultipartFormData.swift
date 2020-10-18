@@ -6,7 +6,7 @@
 import Foundation
 
 @objc
-class WsRequestMultipartFormData: WsRequestWrap {
+public class WsRequestMultipartFormData: WsRequestWrap {
 
     public required init(_ origin: WsRequestI,
                          bodyParts: [WsMultipartFormDataPart]) {
@@ -27,7 +27,7 @@ class WsRequestMultipartFormData: WsRequestWrap {
         )
     }
 
-    override func urlRequest() -> URLRequest {
+    public override func urlRequest() -> URLRequest {
         var req = super.urlRequest()
         var headers = req.allHTTPHeaderFields ?? [String: String]()
         headers["Content-Length"] = String(format:"%i", req.httpBody?.count ?? 0)
