@@ -6,7 +6,7 @@
 import Foundation
 
 @objc
-class WsRequstMultipartFormData: WsRequestWrap {
+class WsRequestMultipartFormData: WsRequestWrap {
 
     public required init(_ origin: WsRequestI,
                          bodyParts: [WsMultipartFormDataPart]) {
