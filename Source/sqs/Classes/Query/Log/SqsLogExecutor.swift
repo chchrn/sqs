@@ -23,8 +23,9 @@ public class SqsLogExecutor: SqsExecutor {
         return self.origin.execute(query).then { (response: Q.TResponse) -> Q.TResponse in
             self.log.debug("success_query", parameters: ["query": queryDesc])
             return response
-        }.catch { _ in
-            self.log.error("fail_query", parameters: ["query": queryDesc])
+        }.catch { error in
+            self.log.error("fail_query", parameters: ["query": queryDesc,
+                                                      "error": error])
         }
     }
 }
