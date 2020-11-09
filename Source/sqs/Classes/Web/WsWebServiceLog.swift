@@ -39,9 +39,10 @@ public class WsWebServiceLog: NSObject, WsWebService {
                               "data.size_kb": Int(response.data.count / 1024),
                           ])
             return response
-        }.catch { _ in
+        }.catch { error in
             self.log.error("fail_web_request",
-                           parameters: ["req": request.urlRequest()])
+                           parameters: ["req": request.urlRequest(),
+                                        "error": error])
         }
     }
 }
