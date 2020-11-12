@@ -23,10 +23,10 @@ class WsMultipartFormDataBodyTests: XCTestCase {
         let body = try? WsMultipartFormDataBody(parts: [part1, part2], boundary: boundary).body()
         let expectedBody =
                 (("--\(boundary)\r\n"
-                        + "Content-Disposition: form-data;name=\"field1\"\r\n\r\n").data(using: encoding) ?? Data())
+                        + "Content-Disposition: form-data; name=\"field1\"\r\n\r\n").data(using: encoding) ?? Data())
                         + field1Data
                         + (("\r\n--\(boundary)\r\n"
-                        + "Content-Disposition: form-data;name=\"field2\"\r\n\r\n").data(using: encoding) ?? Data())
+                        + "Content-Disposition: form-data; name=\"field2\"\r\n\r\n").data(using: encoding) ?? Data())
                         + field2Data
                         + (("\r\n--\(boundary)--\r\n").data(using: encoding) ?? Data())
         XCTAssertEqual(body, expectedBody)
@@ -40,7 +40,7 @@ class WsMultipartFormDataBodyTests: XCTestCase {
 
         let part1 = WsMultipartFormDataPartEasy(name: "field1",
                                                 additionalHeaders: [
-                                                    "Content-type": "text/plain;charset=UTF-8"
+                                                    "Content-Type": "text/plain; charset=UTF-8"
                                                 ],
                                                 data: field1Data)
         let part2 = WsMultipartFormDataPartEasy(name: "field2",
@@ -49,13 +49,13 @@ class WsMultipartFormDataBodyTests: XCTestCase {
         let body = try? WsMultipartFormDataBody(parts: [part1, part2], boundary: boundary).body()
         let expectedBody =
                 (("--\(boundary)\r\n"
-                        + "Content-Disposition: form-data;name=\"field1\"\r\n\r\n"
-                        + "Content-type: text/plain;charset=UTF-8\r\n"
+                        + "Content-Disposition: form-data; name=\"field1\"\r\n\r\n"
+                        + "Content-Type: text/plain; charset=UTF-8\r\n"
                         + "\r\n"
                 ).data(using: encoding) ?? Data())
                         + field1Data
                         + (("\r\n--\(boundary)\r\n"
-                        + "Content-Disposition: form-data;name=\"field2\"\r\n\r\n").data(using: encoding) ?? Data())
+                        + "Content-Disposition: form-data; name=\"field2\"\r\n\r\n").data(using: encoding) ?? Data())
                         + field2Data
                         + (("\r\n--\(boundary)--\r\n").data(using: encoding) ?? Data())
         XCTAssertEqual(body, expectedBody)

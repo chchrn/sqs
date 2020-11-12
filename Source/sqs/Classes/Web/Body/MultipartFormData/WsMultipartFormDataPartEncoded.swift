@@ -23,7 +23,9 @@ internal class WsMultipartFormDataPartEncoded {
     }
 
     private func headerData() -> Data {
-        var string = self.part.headers.map { (key, value) -> String in
+        let keys = self.part.headers.keys.sorted(by: <)
+        var string = keys.map { key -> String in
+            let value = self.part.headers[key]!
             return String(format: "%@: %@\r\n", key, value)
         }.joined(separator: "\r\n")
         string += "\r\n"

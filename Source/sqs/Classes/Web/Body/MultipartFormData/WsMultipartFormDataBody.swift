@@ -35,4 +35,10 @@ public class WsMultipartFormDataBody: WsBody {
 
         return data
     }
+
+    public func bodyLength() -> UInt64 {
+        return self.parts.reduce(into: UInt64(0)) { result, part in
+            result + part.contentLength
+        }
+    }
 }

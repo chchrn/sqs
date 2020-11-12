@@ -24,6 +24,13 @@ public class WsRequestBody: NSObject, WsRequestI {
         do {
             let body = try self.body.body()
             request.httpBody = body
+
+            let contentLength = self.body.bodyLength()
+            if contentLength > 0 {
+                var headers = request.allHTTPHeaderFields ?? [String: String]()
+                headers["Content-Length"] = String(format:"%i", contentLength)
+                request.allHTTPHeaderFields = headers
+            }
         } catch {
             print("Can't insert body for object \(self), request \(request)")
         }

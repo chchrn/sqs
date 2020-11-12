@@ -12,7 +12,7 @@ public class WsRequestMultipartFormData: WsRequestWrap {
                          bodyParts: [WsMultipartFormDataPart]) {
         let boundary = String(format: "Boundary+%08X%08X", arc4random(), arc4random())
         let headers = [
-            "Content-Type": String(format:"multipart/form-data;boundary=\"%@\"", boundary)
+            "Content-Type": String(format:"multipart/form-data; boundary=%@", boundary)
         ]
 
         super.init(
@@ -25,13 +25,5 @@ public class WsRequestMultipartFormData: WsRequestWrap {
                         headers: headers
                 )
         )
-    }
-
-    public override func urlRequest() -> URLRequest {
-        var req = super.urlRequest()
-        var headers = req.allHTTPHeaderFields ?? [String: String]()
-        headers["Content-Length"] = String(format:"%i", req.httpBody?.count ?? 0)
-        req.allHTTPHeaderFields = headers
-        return req
     }
 }

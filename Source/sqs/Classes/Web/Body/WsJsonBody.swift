@@ -20,4 +20,8 @@ public class WsJsonBody: WsBody {
         let data = try JSONSerialization.data(withJSONObject: self.params)
         return data
     }
+
+    public func bodyLength() -> UInt64 {
+        return UInt64(0)
+    }
 }

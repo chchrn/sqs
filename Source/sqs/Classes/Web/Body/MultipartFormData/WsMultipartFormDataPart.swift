@@ -8,7 +8,7 @@ import Foundation
 public protocol WsMultipartFormDataPart {
     var headers: [String: String] {get}
     var content: Data {get}
-    var contentLength: Int {get}
+    var contentLength: UInt64 {get}
 }
 
 public class WsMultipartFormDataPartEasy: WsMultipartFormDataPart {
@@ -38,7 +38,7 @@ public class WsMultipartFormDataPartEasy: WsMultipartFormDataPart {
         }
 
         var headers = [String: String]()
-        headers["Content-Disposition"] = dispositionArr.joined(separator: ";")
+        headers["Content-Disposition"] = dispositionArr.joined(separator: "; ")
         headers.merge(additionalHeaders) { (current, _) in current }
 
         self.init(headers: headers,
@@ -51,7 +51,7 @@ public class WsMultipartFormDataPartEasy: WsMultipartFormDataPart {
         self.content = content
     }
 
-    public var contentLength: Int {
-        return self.content.count
+    public var contentLength: UInt64 {
+        return UInt64(self.content.count)
     }
 }
