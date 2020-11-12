@@ -6,13 +6,13 @@
 import Foundation
 
 public protocol WsMultipartFormDataPart {
-    var headers: [String: String] {get}
+    var headers: [[String: String]] {get}
     var content: Data {get}
     var contentLength: UInt64 {get}
 }
 
 public class WsMultipartFormDataPartEasy: WsMultipartFormDataPart {
-    public let headers: [String: String]
+    public let headers: [[String: String]]
     public let content: Data
 
     public convenience init(name: String,
@@ -37,15 +37,18 @@ public class WsMultipartFormDataPartEasy: WsMultipartFormDataPart {
             dispositionArr.append(String(format: "filename=\"%@\"", filename))
         }
 
-        var headers = [String: String]()
-        headers["Content-Disposition"] = dispositionArr.joined(separator: "; ")
-        headers.merge(additionalHeaders) { (current, _) in current }
+        var headers = [[String: String]]()
+        headers.append(["Content-Disposition": dispositionArr.joined(separator: "; ")])
+
+        additionalHeaders.forEach { (key: String, value: String) -> () in
+            headers.append([key: value])
+        }
 
         self.init(headers: headers,
                   content: data)
     }
 
-    public required init(headers: [String: String],
+    public required init(headers: [[String: String]],
                          content: Data) {
         self.headers = headers
         self.content = content
