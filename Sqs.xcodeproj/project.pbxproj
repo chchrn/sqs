@@ -15,8 +15,8 @@
 		AED7E62CC80B6A02E67B58DE /* WsMultipartFormDataBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EBC75474A95F05F3FD93 /* WsMultipartFormDataBody.swift */; };
 		AED7E65772DE45C555BB9E92 /* WsBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7E0B299DFF2F3E82ECE04 /* WsBoundary.swift */; };
 		AED7E86EE3654032286C83BB /* WsMultipartFormDataPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EA4AC62A79970D18F521 /* WsMultipartFormDataPart.swift */; };
-		AED7E96E7706F65E1515956E /* WsRequestTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EC506E99021202AA12BD /* WsRequestTimeout.swift */; };
 		AED7EA05303795A2C203911C /* WsMultipartFormDataPartEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EB534844FD69ED9AB9F2 /* WsMultipartFormDataPartEncoded.swift */; };
+		AED7EDE30550F466A9B31855 /* WsRequestTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EC506E99021202AA12BD /* WsRequestTimeout.swift */; };
 		AED7EE01D0DD2B871D6C20A0 /* SqsLogExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */; };
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -510,6 +510,7 @@
 				AED7E86EE3654032286C83BB /* WsMultipartFormDataPart.swift in Sources */,
 				AED7EA05303795A2C203911C /* WsMultipartFormDataPartEncoded.swift in Sources */,
 				AED7E416A53F805CE461B1BF /* WsRequestMultipartFormData.swift in Sources */,
+				AED7EDE30550F466A9B31855 /* WsRequestTimeout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +520,6 @@
 			files = (
 				B233A9A1248FE3DB00EE5F77 /* SqsTests.swift in Sources */,
 				AED7E336803C823A59E9A403 /* WsMultipartFormDataBodyTests.swift in Sources */,
-				AED7E96E7706F65E1515956E /* WsRequestTimeout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
