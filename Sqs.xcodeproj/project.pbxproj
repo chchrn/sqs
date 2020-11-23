@@ -63,7 +63,6 @@
 		627F03C6252AF54300A5EBD3 /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		AED7E0B299DFF2F3E82ECE04 /* WsBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsBoundary.swift; sourceTree = "<group>"; };
 		AED7E37BD01023489CA674D0 /* WsMultipartFormDataBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataBodyTests.swift; sourceTree = "<group>"; };
-		AED7E6600961D7AF3F1DD153 /* carthage-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
 		AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsLogExecutor.swift; sourceTree = "<group>"; };
 		AED7E781E77F9AF547940FBD /* WsRequestMultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestMultipartFormData.swift; sourceTree = "<group>"; };
 		AED7EA4AC62A79970D18F521 /* WsMultipartFormDataPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataPart.swift; sourceTree = "<group>"; };
@@ -172,7 +171,6 @@
 				B233A95B248FE21700EE5F77 /* Source */,
 				B233A942248FE1BF00EE5F77 /* Products */,
 				B233A9AB2490001900EE5F77 /* Frameworks */,
-				AED7E6600961D7AF3F1DD153 /* carthage-build.sh */,
 				AED7E738B3537642FFCE694F /* scripts */,
 			);
 			sourceTree = "<group>";
@@ -386,7 +384,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = chchrn;
 				TargetAttributes = {
 					B233A940248FE1BF00EE5F77 = {
@@ -669,7 +667,7 @@
 				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +697,7 @@
 				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
