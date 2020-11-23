@@ -21,5 +21,4 @@ public class WsRequestTimeout: WsRequestI {
         request.timeoutInterval = self.timeout
         return request
     }
-
 }
