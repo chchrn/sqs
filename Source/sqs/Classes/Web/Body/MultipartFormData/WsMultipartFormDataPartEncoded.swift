@@ -23,9 +23,13 @@ internal class WsMultipartFormDataPartEncoded {
     }
 
     private func headerData() -> Data {
-        var string = self.part.headers.map { (key, value) -> String in
-            return String(format: "%@: %@\r\n", key, value)
-        }.joined(separator: "\r\n")
+        var strings = [String]()
+        self.part.headers.forEach { (dictionary: [String: String]) -> () in
+            dictionary.forEach { (key: String, value: String) -> () in
+                strings.append(String(format: "%@: %@\r\n", key, value))
+            }
+        }
+        var string = strings.joined(separator: "\r\n")
         string += "\r\n"
         return string.data(using: self.encoding) ?? Data()
     }

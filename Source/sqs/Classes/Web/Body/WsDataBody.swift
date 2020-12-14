@@ -16,4 +16,8 @@ public class WsDataBody: WsBody {
     public func body() throws -> Data {
         return self.data
     }
+
+    public func bodyLength() -> UInt64 {
+        return UInt64(self.data.count)
+    }
 }

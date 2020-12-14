@@ -16,6 +16,7 @@
 		AED7E65772DE45C555BB9E92 /* WsBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7E0B299DFF2F3E82ECE04 /* WsBoundary.swift */; };
 		AED7E86EE3654032286C83BB /* WsMultipartFormDataPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EA4AC62A79970D18F521 /* WsMultipartFormDataPart.swift */; };
 		AED7EA05303795A2C203911C /* WsMultipartFormDataPartEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EB534844FD69ED9AB9F2 /* WsMultipartFormDataPartEncoded.swift */; };
+		AED7EDE30550F466A9B31855 /* WsRequestTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7EC506E99021202AA12BD /* WsRequestTimeout.swift */; };
 		AED7EE01D0DD2B871D6C20A0 /* SqsLogExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */; };
 		B233A94B248FE1BF00EE5F77 /* Sqs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233A941248FE1BF00EE5F77 /* Sqs.framework */; };
 		B233A9A0248FE38F00EE5F77 /* Sqs.h in Headers */ = {isa = PBXBuildFile; fileRef = B233A960248FE21700EE5F77 /* Sqs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,7 +63,6 @@
 		627F03C6252AF54300A5EBD3 /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		AED7E0B299DFF2F3E82ECE04 /* WsBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsBoundary.swift; sourceTree = "<group>"; };
 		AED7E37BD01023489CA674D0 /* WsMultipartFormDataBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataBodyTests.swift; sourceTree = "<group>"; };
-		AED7E6600961D7AF3F1DD153 /* carthage-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
 		AED7E66537FE6124DC6903A6 /* SqsLogExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsLogExecutor.swift; sourceTree = "<group>"; };
 		AED7E781E77F9AF547940FBD /* WsRequestMultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestMultipartFormData.swift; sourceTree = "<group>"; };
 		AED7EA4AC62A79970D18F521 /* WsMultipartFormDataPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataPart.swift; sourceTree = "<group>"; };
@@ -70,6 +70,7 @@
 		AED7EB534844FD69ED9AB9F2 /* WsMultipartFormDataPartEncoded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataPartEncoded.swift; sourceTree = "<group>"; };
 		AED7EBC75474A95F05F3FD93 /* WsMultipartFormDataBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsMultipartFormDataBody.swift; sourceTree = "<group>"; };
 		AED7EC2C00BF84C57DA8F26B /* precommit.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = precommit.sh; sourceTree = "<group>"; };
+		AED7EC506E99021202AA12BD /* WsRequestTimeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsRequestTimeout.swift; sourceTree = "<group>"; };
 		B233A941248FE1BF00EE5F77 /* Sqs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sqs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A94A248FE1BF00EE5F77 /* SqsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B233A95D248FE21700EE5F77 /* SqsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqsTests.swift; sourceTree = "<group>"; };
@@ -170,7 +171,6 @@
 				B233A95B248FE21700EE5F77 /* Source */,
 				B233A942248FE1BF00EE5F77 /* Products */,
 				B233A9AB2490001900EE5F77 /* Frameworks */,
-				AED7E6600961D7AF3F1DD153 /* carthage-build.sh */,
 				AED7E738B3537642FFCE694F /* scripts */,
 			);
 			sourceTree = "<group>";
@@ -320,6 +320,7 @@
 				EB38688E992BFD91675BCF56 /* WsRequestJsonBody.swift */,
 				EB386570BCFE045E0CC7DCB9 /* WsRequestQueryParams.swift */,
 				AED7E781E77F9AF547940FBD /* WsRequestMultipartFormData.swift */,
+				AED7EC506E99021202AA12BD /* WsRequestTimeout.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -383,7 +384,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = chchrn;
 				TargetAttributes = {
 					B233A940248FE1BF00EE5F77 = {
@@ -507,6 +508,7 @@
 				AED7E86EE3654032286C83BB /* WsMultipartFormDataPart.swift in Sources */,
 				AED7EA05303795A2C203911C /* WsMultipartFormDataPartEncoded.swift in Sources */,
 				AED7E416A53F805CE461B1BF /* WsRequestMultipartFormData.swift in Sources */,
+				AED7EDE30550F466A9B31855 /* WsRequestTimeout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +667,7 @@
 				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +697,7 @@
 				);
 				INFOPLIST_FILE = "Source/sqs/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
